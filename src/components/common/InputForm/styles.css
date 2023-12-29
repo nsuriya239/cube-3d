@@ -1,0 +1,22 @@
+.inputFormFieldsDiv label {
+	padding-right: 25px;
+}
+
+.inputFormFieldsDiv {
+	display: flex;
+	justify-content: space-between;
+	align-content: space-around;
+	flex-direction: row;
+	align-items: center;
+}
+
+.inputFormDiv {
+	display: flex;
+	flex-direction: column-reverse;
+	align-items: center;
+	padding: auto;
+}
+.inputForm {
+	margin-bottom: "20px";
+	padding: 10px;
+}
