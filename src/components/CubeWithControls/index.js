@@ -6,11 +6,13 @@ import DirectionControl from "../common/DirectionControl";
 import ZoomControl from "../common/ZoomControl";
 import Icon3d from "../common/Icon3d";
 import Icon360 from "../common/Icon360";
+import MultiDirectionalArrow from "../common/MultiDirectionalArrow";
 
 const CubeWithControls = ({ dimensions }) => {
 	const cubeRef = useRef();
 	const [animateToggle, setAnimateToggle] = useState(false);
 	const [orbitControlToggle, setOrbitControlToggle] = useState(false);
+	const [directionControlToggle, setDirectionControlToggle] = useState(false);
 	const [zoom, setZoom] = useState(1);
 
 	useEffect(() => {}, [animateToggle, orbitControlToggle]);
@@ -21,6 +23,10 @@ const CubeWithControls = ({ dimensions }) => {
 
 	const handleOrbitControlToggle = (e) => {
 		setOrbitControlToggle(!orbitControlToggle);
+	};
+
+	const handleDirectionControlToggle = (e) => {
+		setDirectionControlToggle(!directionControlToggle);
 	};
 
 	return (
@@ -40,6 +46,13 @@ const CubeWithControls = ({ dimensions }) => {
 					stateValue={animateToggle}
 					onClickEvent={handleAnimationToggle}
 				/>
+				<MultiDirectionalArrow
+					title='Enable directional control'
+					disableTitle='Disable directional control'
+					placement='left'
+					stateValue={directionControlToggle}
+					onClickEvent={handleDirectionControlToggle}
+				/>
 			</div>
 			<ThreeCanvas
 				component={
@@ -55,7 +68,7 @@ const CubeWithControls = ({ dimensions }) => {
 			<ZoomControl setZoom={setZoom} />
 			<DirectionControl
 				refValue={cubeRef}
-				enabled={orbitControlToggle}
+				enabled={directionControlToggle}
 			/>
 		</div>
 	);
