@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import CubeForm from "./components/CubeForm";
+import CubeForm from "./pages/CubeForm";
 
 const App = () => {
 	return (

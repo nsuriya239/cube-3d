@@ -1,0 +1,14 @@
+.cubeFormDiv {
+	display: "flex";
+	flex-direction: "column";
+	align-items: "center";
+}
+
+.inputDiv {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	align-content: flex-end;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
