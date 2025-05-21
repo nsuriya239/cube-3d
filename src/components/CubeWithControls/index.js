@@ -11,7 +11,7 @@ import MultiDirectionalArrow from "../common/MultiDirectionalArrow";
 const CubeWithControls = ({ dimensions }) => {
 	const cubeRef = useRef();
 	const [animateToggle, setAnimateToggle] = useState(false);
-	const [orbitControlToggle, setOrbitControlToggle] = useState(false);
+	const [orbitControlToggle, setOrbitControlToggle] = useState(true);
 	const [directionControlToggle, setDirectionControlToggle] = useState(false);
 	const [zoom, setZoom] = useState(1);
 

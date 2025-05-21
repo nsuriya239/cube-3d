@@ -14,7 +14,10 @@ const Cube = ({ width, height, length, color, position, animate, cubeRef, zoom }
 	return (
 		<mesh
 			ref={cubeRef}
-			position={position || [0, 0, 0]}>
+			position={position || [0, 0, 0]}
+			onPointerOver={() => (document.body.style.cursor = "pointer")}
+			onPointerOut={() => (document.body.style.cursor = "auto")}
+			data-testid="cube-mesh">
 			<lineSegments>
 				<edgesGeometry
 					attach='geometry'
